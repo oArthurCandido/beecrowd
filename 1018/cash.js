@@ -1,0 +1,25 @@
+var input = require('fs').readFileSync('./stdin', 'utf8');
+var lines = input.split('\n');
+var cash = lines[0];
+
+console.log(cash);
+var resto = cash % 100;
+var cash = Math.floor(cash / 100);
+console.log(`${cash} nota(s) de R$ 100,00`);
+var cash = Math.floor(resto / 50);
+console.log(`${cash} nota(s) de R$ 50,00`);
+var resto = resto % 50;
+var cash = Math.floor(resto / 20);
+console.log(`${cash} nota(s) de R$ 20,00`);
+var resto = resto % 20;
+var cash = Math.floor(resto / 10);
+console.log(`${cash} nota(s) de R$ 10,00`);
+var resto = resto % 10;
+var cash = Math.floor(resto / 5);
+console.log(`${cash} nota(s) de R$ 5,00`);
+var resto = resto % 5;
+var cash = Math.floor(resto / 2);
+console.log(`${cash} nota(s) de R$ 2,00`);
+var resto = resto % 2;
+var cash = Math.floor(resto / 1);
+console.log(`${cash} nota(s) de R$ 1,00`);
